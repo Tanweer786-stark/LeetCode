@@ -1,7 +1,7 @@
 class Solution {
 private:
-    void solve(vector<int> nums, vector<vector<int>>& ans, int index){
-        //base case
+    void solve(vector<int>nums, vector<vector<int>>&ans, int index){
+        //base Case
         if(index >= nums.size()){
             ans.push_back(nums);
             return;
@@ -9,9 +9,8 @@ private:
         for(int j = index; j<nums.size(); j++){
             swap(nums[index], nums[j]);
             solve(nums, ans, index+1);
-            //Back trucking
+            //Backtrucking
             swap(nums[index], nums[j]);
-
         }
     }
 public:
