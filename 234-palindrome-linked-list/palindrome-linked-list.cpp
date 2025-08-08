@@ -13,7 +13,7 @@ private:
     bool CheckPalindrome(vector<int> arr){
         int n = arr.size();
         int s = 0;
-        int e = n-1;
+        int e = n -1;
 
         while(s<=e){
             if(arr[s] != arr[e]){
@@ -30,7 +30,7 @@ public:
         ListNode* temp = head;
         while(temp != NULL){
             arr.push_back(temp -> val);
-            temp = temp -> next;
+            temp = temp ->next;
         }
         return CheckPalindrome(arr);
     }
